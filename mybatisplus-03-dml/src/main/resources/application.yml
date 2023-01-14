@@ -1,0 +1,27 @@
+# TODO server port
+server:
+  port: 8082
+
+---
+# TODO datasource
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/db1?useServerPrepStmts=true
+    username: root
+    password:
+    type: com.alibaba.druid.pool.DruidDataSource
+
+---
+# TODO mybatis-plus log
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+---
+# TODO set id type
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: assign_id
